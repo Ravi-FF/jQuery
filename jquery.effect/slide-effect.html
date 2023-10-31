@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide effect in jquery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .box{
+            width: 30%;
+            margin: 30px auto;
+            text-align: center;
+            border: 2px solid red;
+            padding: 20px;
+        }
+        body{
+            padding: 20px;
+        }
+        button{
+            padding: 8px 30px;
+            font-size: 20px;
+        }
+        #slide-down-box{
+            display: none;
+        }
+        #fade-to-box{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>slide effect in jquery</h1>
+    <div id="slide-up-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="slide-up-btn">slide-up</button>
+
+    <div id="slide-down-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="slide-down-btn">slide-down</button>
+
+    <div id="slide-toggle-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="slide-toggle-btn">slide-toggle</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#slide-up-btn").click(function(){
+            $("#slide-up-box").slideUp("slow")
+        });
+
+        $("#slide-down-btn").click(function(){
+            $("#slide-down-box").slideDown("fast")
+        });
+        $("#slide-toggle-btn").click(function(){
+            $("#slide-toggle-box").slideToggle(2000)
+        });
+      })
+    </script>
+</body>
+</html>

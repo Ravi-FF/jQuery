@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade effect in jquery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .box{
+            width: 30%;
+            margin: 30px auto;
+            text-align: center;
+            border: 2px solid red;
+            padding: 20px;
+        }
+        body{
+            padding: 20px;
+        }
+        button{
+            padding: 8px 30px;
+            font-size: 20px;
+        }
+        #fade-in-box{
+            display: none;
+        }
+        #fade-to-box{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>fade effect in jquery</h1>
+    <div id="fade-in-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="fade-in">fade-in</button>
+
+    <div id="fade-out-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="fade-out">fade-out</button>
+
+    <div id="fade-toggle" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="toggle">fade-toggle</button>
+
+    <div id="fade-to-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="fade-to">fade-to</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fade-in").click(function(){
+                $("#fade-in-box").fadeIn();
+            })
+            $("#fade-out").click(function(){
+                $("#fade-out-box").fadeOut();
+            })
+            $("#toggle").click(function(){
+                $("#fade-toggle").fadeToggle(3000);
+            })
+            $("#fade-to").click(function(){
+                $("#fade-to-box").fadeTo(2000,0.8);
+            })
+        })
+    </script>
+</body>
+</html>

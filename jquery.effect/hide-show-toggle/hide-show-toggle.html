@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show and toggle effect in jquery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .box{
+            width: 30%;
+            margin: 30px auto;
+            text-align: center;
+            border: 2px solid red;
+            padding: 20px;
+        }
+        body{
+            padding: 20px;
+        }
+        button{
+            padding: 8px 30px;
+            font-size: 20px;
+        }
+        #show-box{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>hide show and toggle effect in jquery</h1>
+    <div id="hide-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="hide">hide</button>
+    <div id="show-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="show">show</button>
+    <div id="toggle-box" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum consectetur amet iste sint consequatur voluptate ullam illum, s
+    </div>
+    <button id="toggle">toggle</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#hide-box").hide("slow");
+            })
+            $("#show").click(function(){
+                $("#show-box").show("slow");
+            })
+            $("#toggle").click(function(){
+                $("#toggle-box").toggle(2000)
+            })
+        })
+    </script>
+</body>
+</html>
